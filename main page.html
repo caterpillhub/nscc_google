@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>New Tab</title>
+        <link rel="stylesheet" href="modify.css">
+    </head>    
+    <body>
+        <section>
+            <div class="google">
+            <img src="google.png">
+            <div class="search">
+                <input type="text" class="query" value="Search Google or type a URL">
+                <div class="misc">
+                    <div><img src="search.png" alt=""></div>
+                    <div><img src="mic.png" alt=""></div>
+                </div>
+            </div>
+            <div class="button">
+                <button class="searchBtn">Click To Search</button>
+            </div>
+        </div>
+    </section>
+    <script>
+        let query = document.querySelector('.query');
+        let searchBtn = document.querySelector('.searchBtn');
+
+        searchBtn.onclick = function(){
+            let url = 'https://www.google.com/search?q='+query.value;
+            window.open(url, '_self')
+        }
+    </script>
+    </body>
+</html>
